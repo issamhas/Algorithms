@@ -1,6 +1,10 @@
 package Graphs;
 import java.util.*;
 
+/**
+ * Problem: LC - "582. Kill Process"
+ * Link: https://leetcode.com/problems/kill-process/submissions/
+ */
 public class KillProcess {
     public List<Integer> killProcess(List<Integer> pid, List<Integer> ppid, int process){
         // Construct a graph representing the process dependencies
@@ -35,7 +39,7 @@ public class KillProcess {
         }
     }
 
-    // Alternative method to collect all the nodes in that
+    // Alternative method to collect all of the child nodes for a given process
     public List<Integer> traverseGraphBFS(Map<Integer, List<Integer>> graph, int process){
         List<Integer> result = new ArrayList<>();
         Queue<Integer> queue = new LinkedList<>();
